@@ -8,6 +8,17 @@ public class task1 {
             n=srt(nums, n);
         }
         print_arr(nums);
+        System.out.println();
+
+        //иерархия объектов Circle, Rect, Triangle, Square
+        Figure[] f = new Figure[4];
+        f[0] = new Circle(5);
+        f[1] = new Rect(2,3);
+        f[2] = new Square(5);
+        f[3] = new Triangle(3, 4, 5);
+        for (int i=0; i<4; i++){
+            System.out.println("Периметр "+f[i].perimeter()+", площадь "+f[i].area());
+        }
     }
     public static int srt(int[] arr, int j){
         int t;

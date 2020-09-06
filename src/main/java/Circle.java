@@ -1,7 +1,9 @@
 public class Circle implements Figure{
+    public Circle(double r) {
+        this.r = r;
+    }
 
     private double r, d;
-
 
     public double perimeter() {
         return 2*Math.PI*r;
