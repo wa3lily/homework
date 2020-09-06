@@ -1,8 +1,7 @@
 public class task1 {
-    //сортировка пузырьком
 
     public static void main(String[] args) {
-
+        //сортировка пузырьком
         int[] nums = new int[] { 9, 8, 8, 7, 5, 3, 1, 0};
         int n=nums.length;
         while (n>1){
