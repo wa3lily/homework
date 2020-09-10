@@ -164,8 +164,30 @@ public class Collect {
         Пример исходного списка: Лада седан, Лада хэтчбек, Мерседес седан, Бмв кроссовер, Форд хэтчбек, Пежо кроссовер, Тойота седан и т.п.     */
         {
             System.out.println("\nЗадача");
-            HashMap<String, Integer> car = new HashMap<String, Integer>();
+            HashMap<String, String> car = new HashMap<String, String>();
+            car.put("Лада", "седан");
+            car.put("Лада", "хэтчбек");
+            car.put("Мерседес", "седан");
+            car.put("Бмв", "кроссовер");
+            car.put("Форд", "хэтчбек");
+            car.put("Пежо", "кроссовер");
+            car.put("Мерседес", "седан");
+            HashMap<String, HashSet<String>> type = new HashMap<String, HashSet<String>>();
+            HashSet<String> tempSet = new HashSet<String>();
+            for (Map.Entry<String, String> t : car.entrySet()) {
+                if (type.containsKey(t.getKey())){
+                    tempSet=type.get(t.getKey());
+                    tempSet.add(t.getValue());
+                    type.put(t.getKey(),tempSet);
+                }else{
+                    tempSet.add(t.getValue());
+                    type.put(t.getKey(),tempSet);
+                }
+            }
 
+            for (Map.Entry<String, HashSet<String>> t : type.entrySet()) {
+                System.out.println(t.getKey()+" "+t.getValue());
+            }
         }
 
     }
