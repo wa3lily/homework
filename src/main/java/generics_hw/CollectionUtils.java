@@ -1,8 +1,8 @@
 package generics_hw;
 
-import com.sun.tools.javac.util.List;
 
 import java.util.Comparator;
+import java.util.List;
 
 public class CollectionUtils {
     public static<T> void addAll(List<? extends T> source, List<? super T> destination) {
